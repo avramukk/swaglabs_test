@@ -11,6 +11,9 @@ export default class InventoryList extends BaseComponent {
     async parseAllItems() {
         const arrayOfAllItems: Item[] = [];
         const itemsCount = await this.itemCardLocator.count();
+        if (itemsCount === 0) {
+            throw new Error('No inventory items found on the page');
+        }
         for (let i = 0; i < itemsCount; i++) {
             const item: Item = {
                 name: await this.getItemName(i),

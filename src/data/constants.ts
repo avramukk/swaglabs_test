@@ -12,6 +12,10 @@ export const USERS: { [key: string]: { username: string; password: string } } = 
     PROBLEM: {
         username: 'problem_user',
         password: 'secret_sauce'
+    },
+    VISUAL: {
+        username: 'visual_user',
+        password: 'secret_sauce'
     }
 };
 
